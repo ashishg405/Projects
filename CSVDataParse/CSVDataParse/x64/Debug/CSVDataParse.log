@@ -1,0 +1,8 @@
+﻿  CSVDataParser.cpp
+C:\Users\Asus\source\repos\CSVDataParse\CSVDataParse\CSVDataParser.cpp(33,9): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Main.cpp
+  Utils.cpp
+C:\Users\Asus\source\repos\CSVDataParse\CSVDataParse\Utils.cpp(28,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Asus\source\repos\CSVDataParse\CSVDataParse\Utils.cpp(29,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  CSVDataParse.vcxproj -> C:\Users\Asus\source\repos\My-projects\File_Watcher\x64\Debug\CSVDataParse.exe
