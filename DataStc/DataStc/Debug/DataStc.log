@@ -1,0 +1,14 @@
+﻿  Array.cpp
+  BST.cpp
+  BSTNode.cpp
+  DataStc.cpp
+  DNode.cpp
+  DoubleLL.cpp
+  Main.cpp
+  SBBSTNode.cpp
+  SelfBalancedBST.cpp
+  SingleLL.cpp
+  SNode.cpp
+  Generating Code...
+     Creating library C:\Users\Asus\source\repos\DataStc\Debug\DataStc.lib and object C:\Users\Asus\source\repos\DataStc\Debug\DataStc.exp
+  DataStc.vcxproj -> C:\Users\Asus\source\repos\DataStc\Debug\DataStc.dll
