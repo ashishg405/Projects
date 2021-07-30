@@ -1,0 +1,4 @@
+﻿  FileWatcher.cpp
+  main.cpp
+C:\Users\Asus\source\repos\My-projects\File_Watcher\File_Watcher\main.cpp(7,20): warning C4129: '.': unrecognized character escape sequence
+  File_Watcher.vcxproj -> C:\Users\Asus\source\repos\My-projects\File_Watcher\Release\File_Watcher.lib
