@@ -7,27 +7,17 @@
 #include <vector>
 #include <set>
 #include "FileWatcher.h"
+#include <functional>
 
 namespace fs = std::filesystem;
-
-
-void test(fs::path p, std::vector<fs::path> &v)
-{
-	v.push_back(p);
-}
-void call(fs::path p,CSVDataParser &object)
-{
-	object.generate();
-}
 
 CSVDataParser::CSVDataParser(std::string _input_files_dir, std::string _output_file)
 {
 	FileWatcher *a = new FileWatcher(fs::path(_input_files_dir));
 	std::string start("(.*)\.(csv)");
 	std::string end("(.*)\.(done)");
-	std::vector <fs::path> working_files;
-	a->register_expr(start, test);
-	a->register_expr(end, call);
+	a->register_expr(start, [this](fs::path disc_file) {std::cout << "File discovered! " << disc_file << "\n"; this->working_files.push_back(disc_file); std::cout << "File processed! " << disc_file << "\n"; });
+	a->register_expr(end, [this](fs::path disc_file) {std::cout << "File discovered! " << disc_file << "\n"; this->generate(this->working_files); });
 	output_file = _output_file;
 	input_files_dir = _input_files_dir;
 	utils = Utils::Utils();

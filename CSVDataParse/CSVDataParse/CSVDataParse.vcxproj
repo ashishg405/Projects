@@ -138,14 +138,14 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Users\Asus\source\repos\My-projects\File_Watcher\File_Watcher;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Asus\source\repos\Projects\File_Watcher\File_Watcher;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Asus\source\repos\My-projects\File_Watcher\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Asus\source\repos\Projects\File_Watcher\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>File_Watcher.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -160,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\My-projects\File_Watcher\File_Watcher\File_Watcher.vcxproj">
+      <Project>{6b1422ec-7adf-4350-be22-4a640ce8e3b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\File_Watcher\File_Watcher\File_Watcher.vcxproj">
       <Project>{6b1422ec-7adf-4350-be22-4a640ce8e3b1}</Project>
     </ProjectReference>
   </ItemGroup>

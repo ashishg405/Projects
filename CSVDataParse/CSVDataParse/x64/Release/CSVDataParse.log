@@ -1,7 +1,16 @@
-﻿  Main.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1966,5): warning : The referenced project '..\..\My-projects\File_Watcher\File_Watcher\File_Watcher.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1966,5): warning : The referenced project '..\..\Projects\File_Watcher\File_Watcher\File_Watcher.vcxproj' does not exist.
+  CSVDataParser.cpp
+C:\Users\Asus\source\repos\Projects\CSVDataParse\CSVDataParse\CSVDataParser.cpp(17,20): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Asus\source\repos\Projects\CSVDataParse\CSVDataParse\CSVDataParser.cpp(18,18): warning C4129: '.': unrecognized character escape sequence
+C:\Users\Asus\source\repos\Projects\CSVDataParse\CSVDataParse\CSVDataParser.cpp(33,9): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Main.cpp
+  Utils.cpp
+C:\Users\Asus\source\repos\Projects\CSVDataParse\CSVDataParse\Utils.cpp(28,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Asus\source\repos\Projects\CSVDataParse\CSVDataParse\Utils.cpp(29,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Generating code
-  2 of 1091 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  1114 of 2060 functions (54.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    133 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  CSVDataParse.vcxproj -> C:\Users\Asus\source\repos\My-projects\File_Watcher\x64\Release\CSVDataParse.exe
+  CSVDataParse.vcxproj -> C:\Users\Asus\source\repos\Projects\File_Watcher\x64\Release\CSVDataParse.exe

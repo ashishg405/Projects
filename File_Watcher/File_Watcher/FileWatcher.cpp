@@ -6,10 +6,9 @@ FileWatcher::FileWatcher(std::filesystem::path watch_path)
 	path_to_watch = watch_path;
 }
 
-template<class...Types> void f(Types&...);
-
-void FileWatcher::_register_expr(std::regex expr, void callback())
+void FileWatcher::_register_expr(std::regex expr, std::function<void(std::filesystem::path)> callback)
 {
+	std::map<std::filesystem::path, int> store_path;
 	while (true)
 	{
 		std::filesystem::directory_iterator dir_iter = std::filesystem::directory_iterator(path_to_watch);
@@ -19,8 +18,12 @@ void FileWatcher::_register_expr(std::regex expr, void callback())
 			{
 				if (std::regex_match(entry.path().generic_string(), expr))
 				{
-					callback(entry.path());
-					std::filesystem::rename(entry.path(), entry.path() / ".processed");
+					auto it = store_path.find(entry.path());
+					if (it == store_path.end())
+					{
+						store_path[entry.path()] = 1;
+						callback(entry.path());
+					}
 				}
 			}
 		}
@@ -28,13 +31,15 @@ void FileWatcher::_register_expr(std::regex expr, void callback())
 	}
 }
 
-void FileWatcher::register_expr(std::string expr, void callback(Types&...))
+void FileWatcher::register_expr(std::string expr, std::function<void(std::filesystem::path)> callback)
 {
 	std::regex reg_exp(expr);
-	std::thread t([this, reg_exp, callback] {this->_register_expr(reg_exp, callback);});
 	auto it = exprs.find(expr);
 	if (it == exprs.end())
+	{
+		std::thread t([this, reg_exp, callback] {this->_register_expr(reg_exp, callback); });
 		exprs.insert(std::pair<std::string, std::thread>(expr, std::move(t)));
+	}
 	else
 		std::cout << "The expression " << expr << " already has a thread running!";
 }
